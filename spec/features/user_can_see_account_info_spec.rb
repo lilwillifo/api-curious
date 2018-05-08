@@ -36,11 +36,14 @@ feature 'User sees their basic account info' do
     expect(page.status_code).to eq(200)
 
     click_link "Sign in with Github"
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq('/lilwillifo')
     expect(page).to have_content('Margaret')
     expect(page).to have_link('Logout')
 
-    expect(page).to have_content(stub_omniauth[:extra][:raw_info][:avatar_url])
+    expect(page).to have_css("img[src*=\"#{stub_omniauth[:extra][:raw_info][:avatar_url]}\"]")
+
+    expect(page).to have_content(stub_omniauth[:extra][:raw_info][:followers])
+    expect(page).to have_content(stub_omniauth[:extra][:raw_info][:following])
 
   end
 end
