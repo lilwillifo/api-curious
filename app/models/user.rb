@@ -14,4 +14,12 @@ class User < ApplicationRecord
       # new_user.email = auth[:info][:email],
     end
   end
+
+  def commit_count
+    7
+  end
+
+  def recent_commit_repos
+    []
+  end
 end

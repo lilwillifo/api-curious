@@ -2,3 +2,7 @@
 
 Followers: <%= @user.follower_count %>
 Following: <%= @user.following_count %>
+
+<div class="commits">
+  Created  <%= pluralize(@user.commit_count, "commit") %> in <%= pluralize(@user.recent_commit_repos.count, "repository") %>
+</div>

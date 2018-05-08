@@ -45,5 +45,7 @@ feature 'User sees their basic account info' do
     expect(page).to have_content(stub_omniauth[:extra][:raw_info][:followers])
     expect(page).to have_content(stub_omniauth[:extra][:raw_info][:following])
 
+    expect(page).to have_css('.commits')
+
   end
 end
