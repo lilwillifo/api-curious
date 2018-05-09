@@ -16,10 +16,33 @@ class User < ApplicationRecord
   end
 
   def commit_count
-    7
+    #make API call
+    conn = Faraday.new(url: "https://api.github.com/users/#{nickname}/events")
+    response = conn.get do |req|
+      req.headers['Authorizations'] = ENV['token']
+    end
+    search = JSON.parse(response.body, symbolize_names: true)
+    events = search.find_all do |event|
+                    event[:type] == 'PushEvent'
+                  end
+    push_events = events.map do |raw_event|
+      PushEvent.new(raw_event)
+    end
+    push_events.sum(&:commit_count)
+
+    #iterate over commits and count recent (filter by date?)
   end
 
   def recent_commit_repos
-    []
+    
+  end
+end
+
+class PushEvent
+  attr_reader :created_at, :repo_name, :commit_count
+  def initialize(raw_event)
+    @created_at = raw_event[:created_at]
+    @repo_name = raw_event[:repo][:name]
+    @commit_count = raw_event[:payload][:commits].count
   end
 end
