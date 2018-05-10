@@ -1,7 +1,8 @@
 class GithubUser
-  def initialize(user)
+  attr_reader :nickname
+  def initialize(nickname)
     @github_service = GithubService.new
-    @nickname = user.nickname
+    @nickname = nickname
   end
 
   def commit_count
@@ -14,8 +15,14 @@ class GithubUser
     end
   end
 
+  def followers
+    github_service.get_url("users/#{nickname}/followers?per_page=100").map do |raw_follower|
+      GithubUser.new(raw_follower[:login])
+    end
+  end
+
   private
-  attr_reader :nickname, :github_service
+  attr_reader :github_service
 
   def push_events
     raw_push_events.map do |raw_event|

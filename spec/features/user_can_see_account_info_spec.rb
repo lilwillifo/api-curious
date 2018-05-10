@@ -53,4 +53,14 @@ feature 'User sees their basic account info' do
       expect(page).to have_content('39 Repositories')
     end
   end
+  scenario 'User sees profile pic, number of starred repos, followers, following' do
+    VCR.use_cassette("github-user-sees-followers") do
+      visit root_path
+      click_link "Sign in with Github"
+      click_link "Followers"
+
+      expect(current_path).to eq('/lilwillifo/followers')
+      expect(page).to have_content('jamesrnelson')
+    end
+  end
 end

@@ -1,6 +1,6 @@
 <img src= "<%= current_user.avatar_url %>" alt='Avatar' height="42" width="42" class='avatar'>
 
-Followers: <%= current_user.follower_count %>
+<%= link_to 'Followers', "#{current_user.nickname}/followers" %>: <%= current_user.follower_count %>
 Following: <%= current_user.following_count %>
 
 <%= link_to pluralize(@github_user.repos.count, "Repository"), "#{current_user.nickname}/repos" %>

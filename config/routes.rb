@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   get '/:nickname', to: 'users#show'
   get '/:nickname/repos', to: 'repos#index'
+  get '/:nickname/followers', to: 'followers#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

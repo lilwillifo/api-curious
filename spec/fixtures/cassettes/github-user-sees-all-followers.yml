@@ -1,0 +1,225 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/lilwillifo/followers?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <GITHUB_TOKEN>
+      User-Agent:
+      - Faraday v0.15.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 May 2018 17:33:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4980'
+      X-Ratelimit-Reset:
+      - '1525975678'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"362fff7ce8f18bdfbe15b1af9d4307ca"
+      X-Oauth-Scopes:
+      - read:public_key, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.059346'
+      X-Github-Request-Id:
+      - E1E9:5660:9B2424:17DCE7D:5AF4827E
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"YayFiber","id":33355716,"avatar_url":"https://avatars2.githubusercontent.com/u/33355716?v=4","gravatar_id":"","url":"https://api.github.com/users/YayFiber","html_url":"https://github.com/YayFiber","followers_url":"https://api.github.com/users/YayFiber/followers","following_url":"https://api.github.com/users/YayFiber/following{/other_user}","gists_url":"https://api.github.com/users/YayFiber/gists{/gist_id}","starred_url":"https://api.github.com/users/YayFiber/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/YayFiber/subscriptions","organizations_url":"https://api.github.com/users/YayFiber/orgs","repos_url":"https://api.github.com/users/YayFiber/repos","events_url":"https://api.github.com/users/YayFiber/events{/privacy}","received_events_url":"https://api.github.com/users/YayFiber/received_events","type":"User","site_admin":false},{"login":"alexcutschall","id":26206747,"avatar_url":"https://avatars2.githubusercontent.com/u/26206747?v=4","gravatar_id":"","url":"https://api.github.com/users/alexcutschall","html_url":"https://github.com/alexcutschall","followers_url":"https://api.github.com/users/alexcutschall/followers","following_url":"https://api.github.com/users/alexcutschall/following{/other_user}","gists_url":"https://api.github.com/users/alexcutschall/gists{/gist_id}","starred_url":"https://api.github.com/users/alexcutschall/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/alexcutschall/subscriptions","organizations_url":"https://api.github.com/users/alexcutschall/orgs","repos_url":"https://api.github.com/users/alexcutschall/repos","events_url":"https://api.github.com/users/alexcutschall/events{/privacy}","received_events_url":"https://api.github.com/users/alexcutschall/received_events","type":"User","site_admin":false},{"login":"jamesrnelson","id":34174321,"avatar_url":"https://avatars1.githubusercontent.com/u/34174321?v=4","gravatar_id":"","url":"https://api.github.com/users/jamesrnelson","html_url":"https://github.com/jamesrnelson","followers_url":"https://api.github.com/users/jamesrnelson/followers","following_url":"https://api.github.com/users/jamesrnelson/following{/other_user}","gists_url":"https://api.github.com/users/jamesrnelson/gists{/gist_id}","starred_url":"https://api.github.com/users/jamesrnelson/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jamesrnelson/subscriptions","organizations_url":"https://api.github.com/users/jamesrnelson/orgs","repos_url":"https://api.github.com/users/jamesrnelson/repos","events_url":"https://api.github.com/users/jamesrnelson/events{/privacy}","received_events_url":"https://api.github.com/users/jamesrnelson/received_events","type":"User","site_admin":false},{"login":"nergdnvlt","id":33960735,"avatar_url":"https://avatars1.githubusercontent.com/u/33960735?v=4","gravatar_id":"","url":"https://api.github.com/users/nergdnvlt","html_url":"https://github.com/nergdnvlt","followers_url":"https://api.github.com/users/nergdnvlt/followers","following_url":"https://api.github.com/users/nergdnvlt/following{/other_user}","gists_url":"https://api.github.com/users/nergdnvlt/gists{/gist_id}","starred_url":"https://api.github.com/users/nergdnvlt/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nergdnvlt/subscriptions","organizations_url":"https://api.github.com/users/nergdnvlt/orgs","repos_url":"https://api.github.com/users/nergdnvlt/repos","events_url":"https://api.github.com/users/nergdnvlt/events{/privacy}","received_events_url":"https://api.github.com/users/nergdnvlt/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Thu, 10 May 2018 17:33:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/lilwillifo/followers?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <GITHUB_TOKEN>
+      User-Agent:
+      - Faraday v0.15.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 May 2018 17:33:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4979'
+      X-Ratelimit-Reset:
+      - '1525975678'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"362fff7ce8f18bdfbe15b1af9d4307ca"
+      X-Oauth-Scopes:
+      - read:public_key, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.029405'
+      X-Github-Request-Id:
+      - E1EA:5663:1A9DB2A:381E820:5AF4827E
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"YayFiber","id":33355716,"avatar_url":"https://avatars2.githubusercontent.com/u/33355716?v=4","gravatar_id":"","url":"https://api.github.com/users/YayFiber","html_url":"https://github.com/YayFiber","followers_url":"https://api.github.com/users/YayFiber/followers","following_url":"https://api.github.com/users/YayFiber/following{/other_user}","gists_url":"https://api.github.com/users/YayFiber/gists{/gist_id}","starred_url":"https://api.github.com/users/YayFiber/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/YayFiber/subscriptions","organizations_url":"https://api.github.com/users/YayFiber/orgs","repos_url":"https://api.github.com/users/YayFiber/repos","events_url":"https://api.github.com/users/YayFiber/events{/privacy}","received_events_url":"https://api.github.com/users/YayFiber/received_events","type":"User","site_admin":false},{"login":"alexcutschall","id":26206747,"avatar_url":"https://avatars2.githubusercontent.com/u/26206747?v=4","gravatar_id":"","url":"https://api.github.com/users/alexcutschall","html_url":"https://github.com/alexcutschall","followers_url":"https://api.github.com/users/alexcutschall/followers","following_url":"https://api.github.com/users/alexcutschall/following{/other_user}","gists_url":"https://api.github.com/users/alexcutschall/gists{/gist_id}","starred_url":"https://api.github.com/users/alexcutschall/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/alexcutschall/subscriptions","organizations_url":"https://api.github.com/users/alexcutschall/orgs","repos_url":"https://api.github.com/users/alexcutschall/repos","events_url":"https://api.github.com/users/alexcutschall/events{/privacy}","received_events_url":"https://api.github.com/users/alexcutschall/received_events","type":"User","site_admin":false},{"login":"jamesrnelson","id":34174321,"avatar_url":"https://avatars1.githubusercontent.com/u/34174321?v=4","gravatar_id":"","url":"https://api.github.com/users/jamesrnelson","html_url":"https://github.com/jamesrnelson","followers_url":"https://api.github.com/users/jamesrnelson/followers","following_url":"https://api.github.com/users/jamesrnelson/following{/other_user}","gists_url":"https://api.github.com/users/jamesrnelson/gists{/gist_id}","starred_url":"https://api.github.com/users/jamesrnelson/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jamesrnelson/subscriptions","organizations_url":"https://api.github.com/users/jamesrnelson/orgs","repos_url":"https://api.github.com/users/jamesrnelson/repos","events_url":"https://api.github.com/users/jamesrnelson/events{/privacy}","received_events_url":"https://api.github.com/users/jamesrnelson/received_events","type":"User","site_admin":false},{"login":"nergdnvlt","id":33960735,"avatar_url":"https://avatars1.githubusercontent.com/u/33960735?v=4","gravatar_id":"","url":"https://api.github.com/users/nergdnvlt","html_url":"https://github.com/nergdnvlt","followers_url":"https://api.github.com/users/nergdnvlt/followers","following_url":"https://api.github.com/users/nergdnvlt/following{/other_user}","gists_url":"https://api.github.com/users/nergdnvlt/gists{/gist_id}","starred_url":"https://api.github.com/users/nergdnvlt/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nergdnvlt/subscriptions","organizations_url":"https://api.github.com/users/nergdnvlt/orgs","repos_url":"https://api.github.com/users/nergdnvlt/repos","events_url":"https://api.github.com/users/nergdnvlt/events{/privacy}","received_events_url":"https://api.github.com/users/nergdnvlt/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Thu, 10 May 2018 17:33:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/lilwillifo/followers?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <GITHUB_TOKEN>
+      User-Agent:
+      - Faraday v0.15.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 May 2018 17:33:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4978'
+      X-Ratelimit-Reset:
+      - '1525975678'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"362fff7ce8f18bdfbe15b1af9d4307ca"
+      X-Oauth-Scopes:
+      - read:public_key, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.036475'
+      X-Github-Request-Id:
+      - E1EB:5663:1A9DB53:381E875:5AF4827E
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"YayFiber","id":33355716,"avatar_url":"https://avatars2.githubusercontent.com/u/33355716?v=4","gravatar_id":"","url":"https://api.github.com/users/YayFiber","html_url":"https://github.com/YayFiber","followers_url":"https://api.github.com/users/YayFiber/followers","following_url":"https://api.github.com/users/YayFiber/following{/other_user}","gists_url":"https://api.github.com/users/YayFiber/gists{/gist_id}","starred_url":"https://api.github.com/users/YayFiber/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/YayFiber/subscriptions","organizations_url":"https://api.github.com/users/YayFiber/orgs","repos_url":"https://api.github.com/users/YayFiber/repos","events_url":"https://api.github.com/users/YayFiber/events{/privacy}","received_events_url":"https://api.github.com/users/YayFiber/received_events","type":"User","site_admin":false},{"login":"alexcutschall","id":26206747,"avatar_url":"https://avatars2.githubusercontent.com/u/26206747?v=4","gravatar_id":"","url":"https://api.github.com/users/alexcutschall","html_url":"https://github.com/alexcutschall","followers_url":"https://api.github.com/users/alexcutschall/followers","following_url":"https://api.github.com/users/alexcutschall/following{/other_user}","gists_url":"https://api.github.com/users/alexcutschall/gists{/gist_id}","starred_url":"https://api.github.com/users/alexcutschall/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/alexcutschall/subscriptions","organizations_url":"https://api.github.com/users/alexcutschall/orgs","repos_url":"https://api.github.com/users/alexcutschall/repos","events_url":"https://api.github.com/users/alexcutschall/events{/privacy}","received_events_url":"https://api.github.com/users/alexcutschall/received_events","type":"User","site_admin":false},{"login":"jamesrnelson","id":34174321,"avatar_url":"https://avatars1.githubusercontent.com/u/34174321?v=4","gravatar_id":"","url":"https://api.github.com/users/jamesrnelson","html_url":"https://github.com/jamesrnelson","followers_url":"https://api.github.com/users/jamesrnelson/followers","following_url":"https://api.github.com/users/jamesrnelson/following{/other_user}","gists_url":"https://api.github.com/users/jamesrnelson/gists{/gist_id}","starred_url":"https://api.github.com/users/jamesrnelson/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jamesrnelson/subscriptions","organizations_url":"https://api.github.com/users/jamesrnelson/orgs","repos_url":"https://api.github.com/users/jamesrnelson/repos","events_url":"https://api.github.com/users/jamesrnelson/events{/privacy}","received_events_url":"https://api.github.com/users/jamesrnelson/received_events","type":"User","site_admin":false},{"login":"nergdnvlt","id":33960735,"avatar_url":"https://avatars1.githubusercontent.com/u/33960735?v=4","gravatar_id":"","url":"https://api.github.com/users/nergdnvlt","html_url":"https://github.com/nergdnvlt","followers_url":"https://api.github.com/users/nergdnvlt/followers","following_url":"https://api.github.com/users/nergdnvlt/following{/other_user}","gists_url":"https://api.github.com/users/nergdnvlt/gists{/gist_id}","starred_url":"https://api.github.com/users/nergdnvlt/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nergdnvlt/subscriptions","organizations_url":"https://api.github.com/users/nergdnvlt/orgs","repos_url":"https://api.github.com/users/nergdnvlt/repos","events_url":"https://api.github.com/users/nergdnvlt/events{/privacy}","received_events_url":"https://api.github.com/users/nergdnvlt/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Thu, 10 May 2018 17:33:50 GMT
+recorded_with: VCR 4.0.0
