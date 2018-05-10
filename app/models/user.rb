@@ -9,9 +9,8 @@ class User < ApplicationRecord
       new_user.avatar_url = auth[:extra][:raw_info][:avatar_url],
       new_user.follower_count = auth[:extra][:raw_info][:followers],
       new_user.following_count = auth[:extra][:raw_info][:following]
-      # new_user.location = auth[:extra][:raw_info][:location],
-      # new_user.repo_count = auth[:extra][:raw_info][:public_repos],
-      # new_user.email = auth[:info][:email],
     end
   end
+
+
 end
