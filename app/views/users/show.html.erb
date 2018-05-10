@@ -3,7 +3,7 @@
 Followers: <%= current_user.follower_count %>
 Following: <%= current_user.following_count %>
 
-<%= pluralize(@github_user.repos.count, "Repository") %>
+<%= link_to pluralize(@github_user.repos.count, "Repository"), "#{current_user.nickname}/repos" %>
 
 <div class="commits">
   Created  <%= pluralize(@github_user.commit_count, "commit") %> %>
