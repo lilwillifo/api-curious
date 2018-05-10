@@ -12,6 +12,8 @@ describe Repo do
   context 'initialize' do
     it 'returns valid attributes' do
       expect(subject).to be_a Repo
+      expect(subject.name).to eq(raw_repo[:name])
+      expect(subject.url).to eq(raw_repo[:html_url])
     end
   end
 end

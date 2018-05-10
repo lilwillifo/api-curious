@@ -9,8 +9,7 @@ class GithubUser
   end
 
   def repos
-    github_service.get_url("users/#{nickname}/repos").map do |raw_repo|
-      binding.pry
+    github_service.get_url("users/#{nickname}/repos?per_page=100").map do |raw_repo|
       Repo.new(raw_repo)
     end
   end

@@ -32,7 +32,8 @@ feature 'User sees their basic account info' do
     stub_omniauth
   end
   scenario 'User sees profile pic, number of starred repos, followers, following' do
-    VCR.use_cassette("github-user-sees-profile") do
+    VCR.use_cassette("github-user-sees-profile-information
+      ") do
       visit root_path
       expect(page.status_code).to eq(200)
 
