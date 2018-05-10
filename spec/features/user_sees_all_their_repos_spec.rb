@@ -40,8 +40,8 @@ feature 'User sees their repo names and URLs on repos index' do
     end
     VCR.use_cassette("user-sees-repo-index") do
       expect(current_path).to eq("/lilwillifo/repos")
-      expect(page).to have_content('Name')
-      expect(page).to have_content('URL')
+      expect(page).to have_content('Black_thursday')
+      expect(page).to have_content('https://github.com/lilwillifo/black_thursday')
     end
   end
 end

@@ -1,7 +1,7 @@
 <h1>All Repos</h1>
 <% @repos.each do |repo| %>
-  <h3><%= repo.name %></h3>
+  <h3><%= repo.name.capitalize %></h3>
   <ul>
-  <li><p><%=link_to repo.url, repo.url %></p></li>
-</ul>
+    <li><p><%=link_to repo.url, repo.url %></p></li>
+  </ul>
 <% end %>

@@ -8,7 +8,7 @@
     <h3><%= link_to 'Followers', "#{current_user.nickname}/followers" %>: <%= current_user.follower_count %></h3>
   </div>
   <div class="col-xs-4">
-    <h3>Following: <%= current_user.following_count %></h3>
+    <h3><%= link_to 'Following', "#{current_user.nickname}/following" %>: <%= current_user.following_count %></h3>
   </div>
   <div class="col-xs-4">
     <h3><%= link_to pluralize(@github_user.repos.count, "Repository"), "#{current_user.nickname}/repos" %></h3>
