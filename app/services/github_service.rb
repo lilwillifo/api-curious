@@ -1,6 +1,6 @@
 class GithubService
   def initialize
-    @headers = { authorization: "token #{ENV['TOKEN']}" }
+    @headers = { authorizations: "token #{ENV['TOKEN']}" }
   end
 
   def get_url(url)

@@ -21,6 +21,12 @@ class GithubUser
     end
   end
 
+  def following
+    github_service.get_url("users/#{nickname}/following?per_page=100").map do |raw_follower|
+      GithubUser.new(raw_follower[:login])
+    end
+  end
+
   private
   attr_reader :github_service
 

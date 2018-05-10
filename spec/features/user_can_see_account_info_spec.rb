@@ -39,7 +39,7 @@ feature 'User sees their basic account info' do
 
       click_link "Sign in with Github"
       expect(current_path).to eq('/lilwillifo')
-      expect(page).to have_content('Margaret')
+      expect(page).to have_content('lilwillifo')
       expect(page).to have_link('Logout')
 
       expect(page).to have_css("img[src*=\"#{stub_omniauth[:extra][:raw_info][:avatar_url]}\"]")

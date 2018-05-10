@@ -1,3 +1,7 @@
+<ul>
 <% @followers.each do |follower| %>
-  <%= follower.nickname %>
+  <li>
+    <h3><%= follower.nickname %></h3>
+  </li>
 <% end %>
+</ul>

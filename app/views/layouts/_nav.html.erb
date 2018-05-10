@@ -1,6 +1,16 @@
-<% if current_user %>
-  Hello, <%= current_user.name %>
-  <%= link_to "Logout", logout_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in with Github', github_login_path %>
-<% end %>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header col-xs-9">
+      <a class="navbar-brand" href="/">Faux Github</a>
+    </div>
+    <div class="navbar-brand col-xs-3 text-center">
+      <% if current_user %>
+        Logged in as <%= current_user.nickname %>
+        <%= link_to "Logout", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in with Github', github_login_path %>
+      <% end %>
+    </div>
+
+  </div>
+</nav>

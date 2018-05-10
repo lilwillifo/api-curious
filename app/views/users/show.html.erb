@@ -1,10 +1,22 @@
-<img src= "<%= current_user.avatar_url %>" alt='Avatar' height="42" width="42" class='avatar'>
+<div class="row">
 
-<%= link_to 'Followers', "#{current_user.nickname}/followers" %>: <%= current_user.follower_count %>
-Following: <%= current_user.following_count %>
-
-<%= link_to pluralize(@github_user.repos.count, "Repository"), "#{current_user.nickname}/repos" %>
-
-<div class="commits">
-  Created  <%= pluralize(@github_user.commit_count, "commit") %> %>
+<div class="col-xs-3">
+  <img src= "<%= current_user.avatar_url %>" alt='Avatar' height="250" width="250" class='avatar'>
+</div>
+<div class="container col-xs-9">
+  <div class="col-xs-4">
+    <h3><%= link_to 'Followers', "#{current_user.nickname}/followers" %>: <%= current_user.follower_count %></h3>
+  </div>
+  <div class="col-xs-4">
+    <h3><%= link_to 'Following', "#{current_user.nickname}/following" %>: <%= current_user.following_count %></h3>
+  </div>
+  <div class="col-xs-4">
+    <h3><%= link_to pluralize(@github_user.repos.count, "Repository"), "#{current_user.nickname}/repos" %></h3>
+  </div>
+</div>
+</div>
+<div class="row text-center">
+  <div class="commits">
+    <h4>Created  <%= pluralize(@github_user.commit_count, "commit") %></h4>
+  </div>
 </div>
