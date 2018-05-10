@@ -10,6 +10,7 @@ class GithubUser
 
   def repos
     github_service.get_url("users/#{nickname}/repos").map do |raw_repo|
+      binding.pry
       Repo.new(raw_repo)
     end
   end

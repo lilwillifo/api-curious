@@ -25,9 +25,9 @@ describe GithubUser do
       it 'returns all the repos names and urls' do
         VCR.use_cassette("github-user-sees-repos") do
           expect(subject.repos).to be_an Array
-          expect(subject.repos.first).to be_a Hash
-          expect(subject.repos.first['name']).to be_a Hash
-          expect(subject.repos.first['url']).to be_a Hash
+          expect(subject.repos.first).to be_a Repo
+          expect(subject.repos.first.name).to be_a String
+          expect(subject.repos.first.url).to be_a String
         end
       end
     end

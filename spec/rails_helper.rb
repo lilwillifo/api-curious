@@ -11,7 +11,7 @@ require 'webmock/rspec'
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<PROPUBLICA_API_KEY>') { ENV['propublica_api_key'] }
+  config.filter_sensitive_data('<GITHUB_TOKEN>') { ENV['TOKEN'] }
 end
 
 def turn_off_vcr
