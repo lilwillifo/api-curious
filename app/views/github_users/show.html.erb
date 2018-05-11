@@ -1,0 +1,12 @@
+<div class="row">
+
+  <div class="col-xs-4">
+    <h3><%= pluralize(@github_user.repos.count, "Repository") %></h3>
+  </div>
+</div>
+</div>
+<div class="row text-center">
+  <div class="commits">
+    <h4>Created  <%= pluralize(@github_user.commit_count, "commit") %></h4>
+  </div>
+</div>

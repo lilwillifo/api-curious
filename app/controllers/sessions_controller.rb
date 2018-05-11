@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
     end
     redirect_to "/#{user.nickname}"
-    # render text: request.env["omniauth.auth"].inspect
   end
 
   def destroy
